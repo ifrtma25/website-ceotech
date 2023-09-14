@@ -17,16 +17,16 @@
                             </li>
 
                             <li>
-                                <a href="">Keanggotaan <span class="arrow_carrot-down"></span></a>
+                                <a href="#">Keanggotaan <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li>
-                                        <a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a>
+                                        <a href="{{-- route('member') --}}">Member</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('demisioner') }}">Demisioner</a>
                                     </li>
                                     <li>
-                                        <a href="{{-- route('member') --}}">Member</a>
+                                        <a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a>
                                     </li>
                                 </ul>
                             </li>
@@ -34,7 +34,11 @@
                             <li class="{{ Request::is('profil') ? 'active' : '' }}">
                                 <a href="{{ route('profil') }}">Profil</a>
                             </li>
-                            <li class="">
+
+                            <li class="{{ Request::is('login') ? 'active' : '' }} text-right">
+                                <a href="{{ route('login') }}">Login</a>
+                            </li>
+                            {{-- <li class="">
                                 <a class="" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
@@ -44,7 +48,7 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
-                            </li>
+                            </li> --}}
                         </ul>
                     </nav>
                 </div>

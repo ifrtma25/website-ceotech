@@ -289,7 +289,7 @@
                                         <h3 class="comment">Financial Officer</h3>
                                     </div>
                                     <div class="product__item__text">
-                                        <h5><a href="">Andi Nur Azizah</a></h5>
+                                        <h5><a href="">Bau Annisa Fitri</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
                                         <h3 class="comment">Financial Officer</h3>
                                     </div>
                                     <div class="product__item__text">
-                                        <h5><a href="">Bau Annisa Fitri</a></h5>
+                                        <h5><a href="">Andi Nur Azizah</a></h5>
                                     </div>
                                 </div>
                             </div>

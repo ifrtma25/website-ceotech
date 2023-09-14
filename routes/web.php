@@ -23,11 +23,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
-Route::middleware(['auth', 'checkroll:Admin'])->group(function () {
-    Route::get('/', [KeanggotaanController::class, 'demisioner'])->name('demisioner');
-    Route::get('/struktur-organisasi', [KeanggotaanController::class, 'struktur_organisasi'])->name('struktur_organisasi');
+Route::get('/demisioner', [KeanggotaanController::class, 'demisioner'])->name('demisioner');
+Route::get('/struktur-organisasi', [KeanggotaanController::class, 'struktur_organisasi'])->name('struktur_organisasi');
 
-    Route::get('/profil', [ProfilController::class, 'index_profil'])->name('profil');
-});
+Route::get('/', [ProfilController::class, 'index_profil'])->name('profil');
+
+// Route::middleware(['auth', 'checkroll:Admin'])->group(function () {
+// });
 
 Auth::routes();
