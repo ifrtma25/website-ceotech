@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KeanggotaanController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,8 +25,9 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashb
 
 Route::middleware(['auth', 'checkroll:Admin'])->group(function () {
     Route::get('/', [KeanggotaanController::class, 'demisioner'])->name('demisioner');
-
     Route::get('/struktur-organisasi', [KeanggotaanController::class, 'struktur_organisasi'])->name('struktur_organisasi');
+
+    Route::get('/profil', [ProfilController::class, 'index_profil'])->name('profil');
 });
 
 Auth::routes();

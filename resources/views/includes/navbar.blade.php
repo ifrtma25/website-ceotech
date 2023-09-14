@@ -4,7 +4,7 @@
             <div class="col-lg-2">
                 <div class="header__logo">
                     <a href="./index.html">
-                        <img src="{{ asset('assets/img/logo.png') }}" alt="">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="" width="100px">
                     </a>
                 </div>
             </div>
@@ -12,18 +12,28 @@
                 <div class="header__nav">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class=""><a href="{{ route('dashboard') }}">Homepage</a>
+                            <li class="{{ Request::is('dashboard') ? 'active' : '' }}">
+                                <a href="{{ route('dashboard') }}">Homepage</a>
                             </li>
 
-                            <li><a href="">Keanggotaan <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="">Keanggotaan <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a></li>
-                                    <li><a href="{{ route('demisioner') }}">Demisioner</a></li>
-                                    <li><a href="">Member</a></li>
+                                    <li>
+                                        <a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('demisioner') }}">Demisioner</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{-- route('member') --}}">Member</a>
+                                    </li>
                                 </ul>
                             </li>
 
-                            <li class=""><a href="">Contact</a></li>
+                            <li class="{{ Request::is('profil') ? 'active' : '' }}">
+                                <a href="{{ route('profil') }}">Profil</a>
+                            </li>
                             <li class="">
                                 <a class="" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
