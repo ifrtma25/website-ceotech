@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.landingPage.app')
 @section('title', 'Login')
 @section('content')
     <div class="container">
@@ -7,7 +7,8 @@
                 <div class="card">
                     <div class="card-header">{{ __('Login') }}</div>
                     <div class="card-body text-center">
-                        <img src="{{ asset('assets/img/logo2.png') }}" alt="" width="150px" class="pt-2 mb-5">
+                        <img src="{{ asset('assets/landingPage/img/logo2.png') }}" alt="" width="150px"
+                            class="pt-2 mb-5">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="row mb-3">

@@ -9,11 +9,11 @@ class KeanggotaanController extends Controller
 {
     public function struktur_organisasi()
     {
-        return view('component.keanggotaan.struktur_organisasi.index');
+        return view('component.landingPage.keanggotaan.struktur_organisasi.index');
     }
 
     public function demisioner()
     {
-        return view('component.keanggotaan.demisioner.index');
+        return view('component.landingPage.keanggotaan.demisioner.index');
     }
 }

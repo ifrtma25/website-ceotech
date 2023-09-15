@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-danger shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="" width="100px">
+                    <img src="{{ asset('assets/landingPage/img/logo.png') }}" alt="" width="100px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -49,11 +49,12 @@
                                 </li>
                             @endif
 
-                            {{-- @if (Route::has('register'))
+                            @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link {{ Request::is('register') ? 'active' : '' }}"
+                                        href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif --}}
+                            @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

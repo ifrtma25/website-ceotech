@@ -8,6 +8,6 @@ class ProfilController extends Controller
 {
     public function index_profil()
     {
-        return view('component.profil.index');
+        return view('component.landingPage.profil.index');
     }
 }

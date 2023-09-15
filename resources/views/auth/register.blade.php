@@ -6,13 +6,15 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">{{ __('Register') }}</div>
-
-                    <div class="card-body">
+                    <div class="card-body text-center">
+                        <img class="pt-2 mb-5" src="{{ asset('assets/landingPage/img/logo2.png') }}" alt=""
+                            width="150px">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
                             <div class="row mb-3">
-                                <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                                <label for="name"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KeanggotaanController;
 use App\Http\Controllers\ProfilController;
@@ -21,14 +22,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/demisioner', [KeanggotaanController::class, 'demisioner'])->name('demisioner');
 Route::get('/struktur-organisasi', [KeanggotaanController::class, 'struktur_organisasi'])->name('struktur_organisasi');
 
-Route::get('/', [ProfilController::class, 'index_profil'])->name('profil');
+Route::get('/profil', [ProfilController::class, 'index_profil'])->name('profil');
 
-// Route::middleware(['auth', 'checkroll:Admin'])->group(function () {
-// });
+Route::middleware(['auth', 'checkroll:Admin'])->group(function () {
+    Route::get('/dashboard_admin', [AdminPageController::class, 'index'])->name('dashboard_admin');
+});
 
 Auth::routes();
