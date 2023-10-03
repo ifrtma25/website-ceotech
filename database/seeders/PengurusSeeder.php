@@ -1,0 +1,228 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class PengurusSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('penguruses')->insert([
+            [
+                'nama' => 'Darmawan Setiawan',
+                'npm' => '2020020153',
+                'macaddress' => '14.07.01.00',
+                'jabatan' => 'Ketua',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'A. Akbar',
+                'npm' => '2020020111',
+                'macaddress' => '14.07.02.00',
+                'jabatan' => 'Wakil Ketua',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Elisabeth Patitingan',
+                'npm' => '2019030001',
+                'macaddress' => '13.07.03.00',
+                'jabatan' => 'Sekretaris',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+            [
+                'nama' => 'Juliani',
+                'npm' => '2020020011',
+                'macaddress' => '14.07.04.00',
+                'jabatan' => 'Bendahara',
+                'angkatan' => 'VII',
+                'jurusan' => 'Teknik Informatika',
+                'gambar' => 'image.jpg',
+            ],
+        ]);
+    }
+}

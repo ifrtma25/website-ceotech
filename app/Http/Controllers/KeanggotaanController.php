@@ -16,4 +16,9 @@ class KeanggotaanController extends Controller
     {
         return view('component.landingPage.keanggotaan.demisioner.index');
     }
+
+    public function member()
+    {
+        return view('component.landingPage.keanggotaan.member.index');
+    }
 }

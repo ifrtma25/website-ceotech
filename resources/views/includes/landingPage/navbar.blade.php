@@ -8,7 +8,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-10">
                 <div class="header__nav">
                     <nav class="header__menu mobile-menu">
                         <ul>
@@ -20,7 +20,7 @@
                                 <a href="#">Keanggotaan <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li>
-                                        <a href="{{-- route('member') --}}">Member</a>
+                                        <a href="{{ route('member') }}">Member</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('demisioner') }}">Demisioner</a>
@@ -31,8 +31,16 @@
                                 </ul>
                             </li>
 
-                            <li class="{{ Request::is('profil') ? 'active' : '' }}">
-                                <a href="{{ route('profil') }}">Profil</a>
+                            <li class="{{ Request::is('ceostore') ? 'active' : '' }}">
+                                <a href="{{-- route('profil') --}}">CeoStore</a>
+                            </li>
+
+                            <li class="{{ Request::is('gallery') ? 'active' : '' }}">
+                                <a href="{{ route('gallery') }}">Galeri</a>
+                            </li>
+
+                            <li class="{{ Request::is('pendaftaran') ? 'active' : '' }}">
+                                <a href="{{ route('pendaftaran') }}">Pendaftaran</a>
                             </li>
 
                             <li class="{{ Request::is('login') ? 'active' : '' }} text-right">

@@ -1,7 +1,6 @@
 @extends('layout.landingPage.app')
 @section('title', 'Dashboard')
 @section('content')
-
     @if (session('status'))
         <script>
             Swal.fire({
@@ -11,7 +10,6 @@
             });
         </script>
     @endif
-
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">

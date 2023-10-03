@@ -3,13 +3,13 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
+            <div class="col-md-5 pt-5 mb-5">
+                <div class="card bg-dark">
+                    <div class="card-header text-light">{{ __('Login') }}</div>
                     <div class="card-body text-center">
-                        <img src="{{ asset('assets/landingPage/img/logo2.png') }}" alt="" width="150px"
+                        <img src="{{ asset('assets/landingPage/img/logo.png') }}" alt="" width="150px"
                             class="pt-2 mb-5">
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('login') }}" class="text-light">
                             @csrf
                             <div class="row mb-3">
                                 <label for="email"
@@ -42,14 +42,14 @@
 
                             <div class="row mb-0">
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-danger">
                                         {{ __('Login') }}
                                     </button>
 
                                 </div>
                                 <div class="col-md-12">
                                     @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        <a class="btn btn-link text-danger" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
                                     @endif
