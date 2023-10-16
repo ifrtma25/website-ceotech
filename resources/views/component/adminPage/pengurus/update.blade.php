@@ -46,19 +46,24 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="angkatan" class="col-md-12">Angkatan</label>
-                                <div class="col-md-12">
-                                    <input type="text" name="angkatan" id="angkatan"
-                                        class="form-control form-control-line @error('angkatan') is-invalid @enderror"
-                                        value="{{ $pengurus->angkatan }}">
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label for="jurusan" class="col-md-12">Jurusan</label>
                                 <div class="col-md-12">
                                     <input type="text" name="jurusan" id="jurusan"
                                         class="form-control form-control-line @error('jurusan') is-invalid @enderror"
                                         value="{{ $pengurus->jurusan }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gol" class="col-md-12">Golongan</label>
+                                <div class="col-md-12">
+                                    <select name="gol"
+                                        class="form-control form-control-line @error('gol') is-invalid @enderror">
+                                        <option value="{{ $pengurus->gol }}">{{ $pengurus->gol }}</option>
+                                        <option value="INTI">INTI</option>
+                                        <option value="Information Officer">Information Officer</option>
+                                        <option value="Technical Officer">Technical Officer</option>
+                                        <option value="Financial Officer">Financial Officer</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">

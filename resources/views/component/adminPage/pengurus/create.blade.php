@@ -62,11 +62,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="angkatan" class="col-md-12">Angkatan</label>
+                                <label for="jurusan" class="col-md-12">Jurusan</label>
                                 <div class="col-md-12">
-                                    <input type="text" name="angkatan" id="angkatan"
-                                        class="form-control form-control-line @error('angkatan') is-invalid @enderror">
-                                    @error('angkatan')
+                                    <input type="text" name="jurusan" id="jurusan"
+                                        class="form-control form-control-line @error('jurusan') is-invalid @enderror">
+                                    @error('jurusan')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -74,11 +74,17 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="jurusan" class="col-md-12">Jurusan</label>
+                                <label for="gol" class="col-md-12">Golongan</label>
                                 <div class="col-md-12">
-                                    <input type="text" name="jurusan" id="jurusan"
-                                        class="form-control form-control-line @error('jurusan') is-invalid @enderror">
-                                    @error('jurusan')
+                                    <select name="gol"
+                                        class="form-control form-control-line @error('gol') is-invalid @enderror">
+                                        <option value="">Pilih</option>
+                                        <option value="INTI">INTI</option>
+                                        <option value="Information Officer">Information Officer</option>
+                                        <option value="Technical Officer">Technical Officer</option>
+                                        <option value="Financial Officer">Financial Officer</option>
+                                    </select>
+                                    @error('gol')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

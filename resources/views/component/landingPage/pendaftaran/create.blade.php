@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12 pt-5 mb-5">
                 <div class="card bg-dark">
-                    <div class="card-header text-light">{{ __('Pendaftaran') }}</div>
+                    <div class="card-header text-light">{{ __('Open Recruitment') }}</div>
                     <div class="card-body text-center">
                         <img src="{{ asset('assets/landingPage/img/logo.png') }}" alt="" width="150px"
                             class="pt-2 mb-5">

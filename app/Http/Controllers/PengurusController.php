@@ -30,8 +30,8 @@ class PengurusController extends Controller
             'npm' => 'required',
             'macaddress' => 'required',
             'jabatan' => 'required',
-            'angkatan' => 'required',
             'jurusan' => 'required',
+            'gol' => 'required',
         ], $message);
 
         if ($request->file('gambar')) {
@@ -43,8 +43,8 @@ class PengurusController extends Controller
             'npm' => $request->input('npm'),
             'macaddress' => $request->input('macaddress'),
             'jabatan' => $request->input('jabatan'),
-            'angkatan' => $request->input('angkatan'),
             'jurusan' => $request->input('jurusan'),
+            'gol' => $request->input('gol'),
             'gambar' => $file,
         ]);
 
@@ -78,8 +78,8 @@ class PengurusController extends Controller
             'npm' => $request->input('npm'),
             'macaddress' => $request->input('macaddress'),
             'jabatan' => $request->input('jabatan'),
-            'angkatan' => $request->input('angkatan'),
             'jurusan' => $request->input('jurusan'),
+            'gol' => $request->input('gol'),
             'gambar' => $file,
         ]);
 

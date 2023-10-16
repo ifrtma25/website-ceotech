@@ -10,6 +10,6 @@ class Pengurus extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama', 'npm', 'macaddress', 'jabatan', 'angkatan', 'jurusan', 'gambar'
+        'nama', 'npm', 'macaddress', 'jabatan', 'jurusan', 'gol', 'gambar'
     ];
 }

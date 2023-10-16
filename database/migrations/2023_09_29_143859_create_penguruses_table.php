@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('npm');
             $table->string('macaddress');
             $table->string('jabatan');
-            $table->string('angkatan');
             $table->string('jurusan');
+            $table->string('gol');
             $table->string('gambar');
             $table->timestamps();
         });

@@ -27,8 +27,8 @@
                                     <th scope="col">NPM</th>
                                     <th scope="col">Mac Address</th>
                                     <th scope="col">Jabatan</th>
-                                    <th scope="col">Angkatan</th>
                                     <th scope="col">Jurusan</th>
+                                    <th scope="col">Golongan</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -41,8 +41,8 @@
                                         <td>{{ $item->npm }}</td>
                                         <td>{{ $item->macaddress }}</td>
                                         <td>{{ $item->jabatan }}</td>
-                                        <td>{{ $item->angkatan }}</td>
                                         <td>{{ $item->jurusan }}</td>
+                                        <td>{{ $item->gol }}</td>
                                         <td>
                                             <img src="{{ asset('storage/' . $item->gambar) }}" alt=""
                                                 width="100px">
