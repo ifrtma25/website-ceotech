@@ -10,4 +10,9 @@ class AdminPageController extends Controller
     {
         return view('component.adminPage.dashboard');
     }
+
+    public function profil()
+    {
+        return view('component.adminPage.profil.index');
+    }
 }

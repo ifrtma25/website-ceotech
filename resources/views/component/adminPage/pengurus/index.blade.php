@@ -16,7 +16,18 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Pengurus</h4>
-                        <a class="btn btn-secondary" href="{{ route('create_pengurus') }}">Tambah Data</a>
+                        <div class="col-md-4">
+                            <div class="form-control">
+                                <form action="{{-- route('pengurus.cari') --}}" method="GET" style="display: inline">
+                                    <input type="text" size="40px" name="cari" placeholder="Cari Berdasarkan Nama"
+                                        style="border: none">
+                                    <button class="fa fa-search" style="border: none; background-color: white"></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <a class="btn btn-secondary" href="{{ route('create_pengurus') }}">Tambah Data</a>
+                        </div>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover">
@@ -28,7 +39,7 @@
                                     <th scope="col">Mac Address</th>
                                     <th scope="col">Jabatan</th>
                                     <th scope="col">Jurusan</th>
-                                    <th scope="col">Golongan</th>
+                                    <th scope="col">Bidang</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Aksi</th>
                                 </tr>

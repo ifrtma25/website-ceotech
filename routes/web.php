@@ -72,6 +72,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pengurus/edit/{id}', [PengurusController::class, 'edit'])->name('edit_pengurus');
     Route::put('/pengurus/update/{id}', [PengurusController::class, 'update'])->name('update_pengurus');
     Route::delete('/pengurus/delete/{id}', [PengurusController::class, 'delete'])->name('delete_pengurus');
+
+    Route::get('/profil', [AdminPageController::class, 'profil'])->name('admin.profil');
 });
 
 Auth::routes();

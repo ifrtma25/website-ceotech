@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{-- route('') --}}">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.profil') }}">
                         <i class="fa fa-circle-user"></i><span class="hide-menu">Profile</span>
                     </a>
                 </li>

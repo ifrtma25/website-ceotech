@@ -10,6 +10,15 @@
             });
         </script>
     @endif
+    @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Gagal!',
+                text: "{{ session('error') }}"
+            });
+        </script>
+    @endif
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -19,7 +28,7 @@
                         <div class="col-md-4">
                             <div class="form-control">
                                 <form action="{{ route('cari_member') }}" method="GET">
-                                    <input type="text" size="37px" name="cari" placeholder="Cari berdasarkan NPM"
+                                    <input type="text" size="37px" name="cari" placeholder="Cari berdasarkan Nama"
                                         value="{{ old('cari') }}" style="border: none">
                                     <button class="fa fa-search" style="border: none; background-color: white"></button>
                                 </form>

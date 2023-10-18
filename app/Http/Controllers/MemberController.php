@@ -10,14 +10,14 @@ class MemberController extends Controller
 {
     public function index()
     {
-        $member = Member::orderBy('nama', 'asc')->get();
+        $member = Member::orderBy('nama', 'asc')->paginate(10);
         return view('component.adminPage.member.index', compact('member'));
     }
 
     public function cari(Request $request)
     {
         $cari = $request->cari;
-        $member = Member::where('npm', 'like', '%' . $cari . '%')->paginate();
+        $member = Member::where('nama', 'like', '%' . $cari . '%')->paginate();
         return view('component.adminPage.member.index', compact('member'));
     }
 
@@ -66,6 +66,12 @@ class MemberController extends Controller
 
         if ($request->file('gambar')) {
             $file = $request->file('gambar')->store('member', 'public');
+        }
+
+        $npm = $request->input('npm');
+
+        if (Member::where('npm', $npm)->exists()) {
+            return redirect()->route('member_admin')->with('error', 'Data sudah ada');
         }
 
         Member::create([
