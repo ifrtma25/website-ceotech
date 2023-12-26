@@ -6,7 +6,7 @@
             <div class="col-lg-8 col-xlg-9 col-md-7">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form-horizontal form-material" action="{{ route('store_demisioner') }}" method="POST"
+                        <form class="form-horizontal form-material" action="{{ route('store.demisioner') }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="form-header">
@@ -50,11 +50,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="jurusan" class="col-md-12">Jurusan</label>
+                                <label for="jabatan" class="col-md-12">Jabatan</label>
                                 <div class="col-md-12">
-                                    <input type="text" name="jurusan" id="jurusan"
-                                        class="form-control form-control-line @error('jurusan') is-invalid @enderror">
-                                    @error('jurusan')
+                                    <input type="text" name="jabatan" id="jabatan"
+                                        class="form-control form-control-line @error('jabatan') is-invalid @enderror">
+                                    @error('jabatan')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -83,7 +83,7 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <button class="btn btn-danger">Tambah</button>
-                                    <a href="{{ route('demisioner_admin') }}" class="btn btn-danger">Batal</a>
+                                    <a href="{{ route('demisioner.admin') }}" class="btn btn-danger">Batal</a>
                                 </div>
                             </div>
                         </form>

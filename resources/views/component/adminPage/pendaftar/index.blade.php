@@ -18,7 +18,7 @@
                         <h4 class="card-title">Pendaftar</h4>
                         <div class="col-md-4">
                             <div class="form-control">
-                                <form action="{{ route('cari_pendaftar') }}" method="GET">
+                                <form action="{{ route('cari.pendaftar') }}" method="GET">
                                     <input type="text" size="37px" name="cari" placeholder="Cari berdasarkan NPM"
                                         value="{{ old('cari') }}" style="border: none">
                                     <button class="fa fa-search" style="border: none; background-color: white"></button>
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a class="btn btn-secondary" href="{{ route('create_pendaftaran') }}">Tambah Data</a>
+                            <a class="btn btn-secondary" href="{{ route('create.pendaftaran') }}">Tambah Data</a>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -60,7 +60,7 @@
                                         </td>
                                         <td>
                                             <div class="form-button-action">
-                                                <form action="{{ route('delete_pendaftar', $item->id) }}" method="POST"
+                                                <form action="{{ route('delete.pendaftar', $item->id) }}" method="POST"
                                                     style="display: inline" onsubmit="return confirm('Yakin?')">
                                                     @csrf
                                                     @method('DELETE')

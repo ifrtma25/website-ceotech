@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href=""><i class="fa fa-home"></i>Keanggotaan</a>
+                        <a href="{{ route('dashboard') }}"><i class="fa fa-home"></i>Keanggotaan</a>
                         <span>Struktur Organisasi</span>
                     </div>
                 </div>

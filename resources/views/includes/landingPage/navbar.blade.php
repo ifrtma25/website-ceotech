@@ -13,7 +13,11 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="{{ Request::is('/') ? 'active' : '' }}">
-                                <a href="{{ route('dashboard') }}">Homepage</a>
+                                <a href="{{ route('dashboard') }}">Beranda</a>
+                            </li>
+
+                            <li class="{{ Request::is('profile') ? 'active' : '' }}">
+                                <a href="{{ route('profile') }}">Profile</a>
                             </li>
 
                             <li>
@@ -26,18 +30,18 @@
                                         <a href="{{ route('demisioner') }}">Demisioner</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a>
+                                        <a href="{{ route('struktur.organisasi') }}">Struktur Organisasi</a>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="{{ Request::is('ceostore') ? 'active' : '' }}">
-                                <a href="{{-- route('profil') --}}">CeoStore</a>
+                            <li class="{{ Request::is('ceoStore') ? 'active' : '' }}">
+                                <a href="{{ route('ceoStore') }}">CeoStore</a>
                             </li>
 
-                            <li class="{{ Request::is('gallery') ? 'active' : '' }}">
+                            {{-- <li class="{{ Request::is('gallery') ? 'active' : '' }}">
                                 <a href="{{ route('gallery') }}">Galeri</a>
-                            </li>
+                            </li> --}}
 
                             <li class="{{ Request::is('pendaftaran') ? 'active' : '' }}">
                                 <a href="{{ route('pendaftaran') }}">Pendaftaran</a>

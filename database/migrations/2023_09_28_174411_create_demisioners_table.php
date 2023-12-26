@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('npm');
             $table->string('angkatan');
-            $table->string('jurusan');
+            $table->string('jabatan');
             $table->string('periode');
             $table->string('gambar');
             $table->timestamps();

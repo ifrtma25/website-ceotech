@@ -17,13 +17,14 @@
                     <div class="card-body">
                         <h4 class="card-title">Member Angkatan IX</h4>
                         <div class="card-body">
-                            <a class="btn btn-danger" href="{{ route('member_admin') }}">Semua Angkatan</a>
+                            <a class="btn btn-danger" href="{{ route('member.admin') }}">Semua Angkatan</a>
                             <a class="btn btn-danger" href="{{ route('angkatan6') }}">Angkatan VI</a>
                             <a class="btn btn-danger" href="{{ route('angkatan7') }}">Angkatan VII</a>
                             <a class="btn btn-danger" href="{{ route('angkatan8') }}">Angkatan VIII</a>
                             <a class="btn btn-danger {{ Request::is('member_angkatan9') ? 'active' : '' }}"
                                 href="{{ route('angkatan9') }}">Angkatan IX</a>
-                            <a class="btn btn-secondary" href="{{ route('create_member') }}">Tambah Data</a>
+                            <a class="btn btn-danger" href="{{ route('angkatan10') }}">Angkatan X</a>
+                            <a class="btn btn-secondary" href="{{ route('create.member') }}">Tambah Data</a>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -53,10 +54,10 @@
                                         </td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="{{ route('edit_member', $item->id) }}" class="btn btn-danger">
+                                                <a href="{{ route('edit.member', $item->id) }}" class="btn btn-danger">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <form action="{{ route('delete_member', $item->id) }}" method="POST"
+                                                <form action="{{ route('delete.member', $item->id) }}" method="POST"
                                                     style="display: inline" onsubmit="return confirm('Yakin?')">
                                                     @csrf
                                                     @method('DELETE')

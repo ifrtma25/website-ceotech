@@ -17,7 +17,7 @@ class DemisionerController extends Controller
     public function cari(Request $request)
     {
         $cari = $request->cari;
-        $demisioner = Demisioner::where('npm', 'like', '%' . $cari . '%')->paginate();
+        $demisioner = Demisioner::where('nama', 'like', '%' . $cari . '%')->paginate();
         return view('component.adminPage.demisioner.index', compact('demisioner'));
     }
 
@@ -31,6 +31,12 @@ class DemisionerController extends Controller
     {
         $demisioner = Demisioner::where('periode', '2021-2022')->orderBy('nama', 'asc')->get();
         return view('component.adminPage.demisioner.periode21-22', compact('demisioner'));
+    }
+
+    public function periode22_23()
+    {
+        $demisioner = Demisioner::where('periode', '2022-2023')->orderBy('nama', 'asc')->get();
+        return view('component.adminPage.demisioner.periode22-23', compact('demisioner'));
     }
 
     public function create()
@@ -48,7 +54,7 @@ class DemisionerController extends Controller
             'nama' => 'required',
             'npm' => 'required',
             'angkatan' => 'required',
-            'jurusan' => 'required',
+            'jabatan' => 'required',
             'periode' => 'required',
         ], $message);
 
@@ -60,12 +66,12 @@ class DemisionerController extends Controller
             'nama' => $request->input('nama'),
             'npm' => $request->input('npm'),
             'angkatan' => $request->input('angkatan'),
-            'jurusan' => $request->input('jurusan'),
+            'jabatan' => $request->input('jabatan'),
             'periode' => $request->input('periode'),
             'gambar' => $file,
         ]);
 
-        return redirect()->route('demisioner_admin')->with('status', 'Berhasil ditambah');
+        return redirect()->route('demisioner.admin')->with('status', 'Berhasil ditambah');
     }
 
     public function edit(Request $request, $id)
@@ -94,12 +100,12 @@ class DemisionerController extends Controller
             'nama' => $request->input('nama'),
             'npm' => $request->input('npm'),
             'angkatan' => $request->input('angkatan'),
-            'jurusan' => $request->input('jurusan'),
+            'jabatan' => $request->input('jabatan'),
             'periode' => $request->input('periode'),
             'gambar' => $file,
         ]);
 
-        return redirect()->route('demisioner_admin')->with('status', 'Berhasil diupdate');
+        return redirect()->route('demisioner.admin')->with('status', 'Berhasil diupdate');
     }
 
     public function delete($id)
@@ -112,6 +118,6 @@ class DemisionerController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('demisioner_admin');
+        return redirect()->route('demisioner.admin');
     }
 }

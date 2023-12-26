@@ -6,6 +6,17 @@
             display: none
         }
     </style>
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="{{ route('dashboard') }}"><i class="fa fa-home"></i>Pendaftaran</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 pt-5 mb-5">
@@ -14,7 +25,7 @@
                     <div class="card-body text-center">
                         <img src="{{ asset('assets/landingPage/img/logo.png') }}" alt="" width="150px"
                             class="pt-2 mb-5">
-                        <form method="POST" action="{{ route('create_pendaftaran') }}" class="text-light text-left"
+                        <form method="POST" action="{{ route('create.pendaftaran') }}" class="text-light text-left"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
@@ -105,7 +116,8 @@
                                     class="col-md-4 col-form-label text-md-end">{{ __('Gambar') }}</label>
                                 <div class="col-md-6">
                                     <input id="gambar" type="file"
-                                        class="form-control @error('gambar') is-invalid @enderror" name="gambar" required>
+                                        class="form-control @error('gambar') is-invalid @enderror" name="gambar"
+                                        required>
                                 </div>
                             </div>
 

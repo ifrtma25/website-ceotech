@@ -19,14 +19,14 @@
                         <div class="col-md-4">
                             <div class="form-control">
                                 <form action="{{-- route('pengurus.cari') --}}" method="GET" style="display: inline">
-                                    <input type="text" size="40px" name="cari" placeholder="Cari Berdasarkan Nama"
+                                    <input type="text" size="37px" name="cari" placeholder="Cari Berdasarkan Nama"
                                         style="border: none">
                                     <button class="fa fa-search" style="border: none; background-color: white"></button>
                                 </form>
                             </div>
                         </div>
                         <div class="card-body">
-                            <a class="btn btn-secondary" href="{{ route('create_pengurus') }}">Tambah Data</a>
+                            <a class="btn btn-secondary" href="{{ route('create.pengurus') }}">Tambah Data</a>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -59,10 +59,10 @@
                                                 width="100px">
                                         </td>
                                         <td>
-                                            <a href="{{ route('edit_pengurus', $item->id) }}" class="btn btn-danger">
+                                            <a href="{{ route('edit.pengurus', $item->id) }}" class="btn btn-danger">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <form action="{{ route('delete_pengurus', $item->id) }}" method="POST"
+                                            <form action="{{ route('delete.pengurus', $item->id) }}" method="POST"
                                                 style="display: inline" onsubmit="return confirm('Yakin?')">
                                                 @csrf
                                                 @method('DELETE')

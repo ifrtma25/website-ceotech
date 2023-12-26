@@ -1,5 +1,5 @@
 @extends('layout.adminPage.app')
-@section('title', 'Member Angkatan VII')
+@section('title', 'Demisioner 2022-2023')
 @section('content')
     @if (session('status'))
         <script>
@@ -15,17 +15,13 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Member Angkatan VII</h4>
-                        <div class="card-body">
-                            <a class="btn btn-danger" href="{{ route('member.admin') }}">Semua Angkatan</a>
-                            <a class="btn btn-danger" href="{{ route('angkatan6') }}">Angkatan VI</a>
-                            <a class="btn btn-danger {{ Request::is('member_angkatan7') ? 'active' : '' }}"
-                                href="{{ route('angkatan7') }}">Angkatan VII</a>
-                            <a class="btn btn-danger" href="{{ route('angkatan8') }}">Angkatan VIII</a>
-                            <a class="btn btn-danger" href="{{ route('angkatan9') }}">Angkatan IX</a>
-                            <a class="btn btn-danger" href="{{ route('angkatan10') }}">Angkatan X</a>
-                            <a class="btn btn-secondary" href="{{ route('create.member') }}">Tambah Data</a>
-                        </div>
+                        <h4 class="card-title">Demisioner 2021-2022</h4>
+                        <a class="btn btn-danger" href="{{ route('demisioner.admin') }}">Semua Periode</a>
+                        <a class="btn btn-danger" href="{{ route('2020-2021') }}">Periode 2020-2021</a>
+                        <a class="btn btn-danger" href="{{ route('2021-2022') }}">Periode 2021-2022</a>
+                        <a class="btn btn-danger {{ Request::is('demisioner_2022-2023') ? 'active' : '' }}"
+                            href="{{ route('2022-2023') }}">Periode 2022-2023</a>
+                        <a class="btn btn-secondary" href="{{ route('create.demisioner') }}">Tambah Data</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover">
@@ -35,32 +31,32 @@
                                     <th scope="col">Nama</th>
                                     <th scope="col">NPM</th>
                                     <th scope="col">Angkatan</th>
-                                    <th scope="col">Jurusan</th>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Periode</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
-                            @foreach ($member as $key => $item)
+                            @foreach ($demisioner as $key => $item)
                                 <tbody>
                                     <tr>
                                         <th scope="row">{{ $key + 1 }}</th>
                                         <td>{{ $item->nama }}</td>
                                         <td>{{ $item->npm }}</td>
                                         <td>{{ $item->angkatan }}</td>
-                                        <td>{{ $item->jurusan }}</td>
+                                        <td>{{ $item->jabatan }}</td>
+                                        <td>{{ $item->periode }}</td>
                                         <td>
                                             <img src="{{ asset('storage/' . $item->gambar) }}" alt=""
                                                 width="100px">
                                         </td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="{{ route('edit.member', $item->id) }}" class="btn btn-danger">
+                                                <a href="{{ route('edit.demisioner', $item->id) }}" class="btn btn-danger">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <form action="{{ route('delete.member', $item->id) }}" method="POST"
-                                                    style="display: inline" onsubmit="return confirm('Yakin?')">
-                                                    @csrf
-                                                    @method('DELETE')
+                                                <form action="{{ route('delete.demisioner', $item->id) }}" method="post"
+                                                    style="display: inline">
                                                     <button class="btn btn-danger">
                                                         <i class="fa fa-times"></i>
                                                     </button>

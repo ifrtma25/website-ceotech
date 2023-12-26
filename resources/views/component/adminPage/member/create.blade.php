@@ -6,7 +6,7 @@
             <div class="col-lg-8 col-xlg-9 col-md-7">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form-horizontal form-material" action="{{ route('store_member') }}" method="POST"
+                        <form class="form-horizontal form-material" action="{{ route('store.member') }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="form-header">
@@ -76,7 +76,7 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <button class="btn btn-danger">Tambah</button>
-                                    <a href="{{ route('member_admin') }}" class="btn btn-danger">Batal</a>
+                                    <a href="{{ route('member.admin') }}" class="btn btn-danger">Batal</a>
                                 </div>
                             </div>
                         </form>

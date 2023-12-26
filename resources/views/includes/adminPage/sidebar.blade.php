@@ -53,25 +53,30 @@
                 </li> --}}
                 <!-- User Profile-->
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard_admin') }}">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.admin') }}">
                         <i class="fa fa-home"></i><span class="">Dashboard</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('member_admin') }}">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('member.admin') }}">
                         <i class="fa fa-user-ninja"></i><span class="hide-menu">Member</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('demisioner_admin') }}">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('demisioner.admin') }}">
                         <i class="fa fa-user-graduate"></i><span class="hide-menu">Demisioner</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('pengurus_admin') }}">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('pengurus.admin') }}">
                         <i class="fa fa-users"></i><span class="hide-menu">Pengurus</span>
                     </a>
                 </li>
+                {{-- <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('gallery_admin') }}">
+                        <i class="fa fa-user"></i><span class="hide-menu">Gallery</span>
+                    </a>
+                </li> --}}
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('pendaftar') }}">
                         <i class="fa fa-user"></i><span class="hide-menu">Calon Member</span>

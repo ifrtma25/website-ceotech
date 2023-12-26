@@ -21,8 +21,10 @@ class KeanggotaanController extends Controller
 
     public function demisioner()
     {
+        $periode20_21 = Demisioner::where('periode', '2020-2021')->orderBy('nama', 'asc')->get();
         $periode21_22 = Demisioner::where('periode', '2021-2022')->orderBy('nama', 'asc')->get();
-        return view('component.landingPage.keanggotaan.demisioner.index', compact('periode21_22'));
+        $periode22_23 = Demisioner::where('periode', '2022-2023')->orderBy('nama', 'asc')->get();
+        return view('component.landingPage.keanggotaan.demisioner.index', compact('periode20_21', 'periode21_22', 'periode22_23'));
     }
 
     public function member()

@@ -27,7 +27,7 @@
                         <h4 class="card-title">Member</h4>
                         <div class="col-md-4">
                             <div class="form-control">
-                                <form action="{{ route('cari_member') }}" method="GET">
+                                <form action="{{ route('cari.member') }}" method="GET">
                                     <input type="text" size="37px" name="cari" placeholder="Cari berdasarkan Nama"
                                         value="{{ old('cari') }}" style="border: none">
                                     <button class="fa fa-search" style="border: none; background-color: white"></button>
@@ -36,12 +36,13 @@
                         </div>
                         <div class="card-body">
                             <a class="btn btn-danger {{ Request::is('member_admin') ? 'active' : '' }}"
-                                href="{{ route('member_admin') }}">Semua Angkatan</a>
+                                href="{{ route('member.admin') }}">Semua Angkatan</a>
                             <a class="btn btn-danger" href="{{ route('angkatan6') }}">Angkatan VI</a>
                             <a class="btn btn-danger" href="{{ route('angkatan7') }}">Angkatan VII</a>
                             <a class="btn btn-danger" href="{{ route('angkatan8') }}">Angkatan VIII</a>
                             <a class="btn btn-danger" href="{{ route('angkatan9') }}">Angkatan IX</a>
-                            <a class="btn btn-secondary" href="{{ route('create_member') }}">Tambah Data</a>
+                            <a class="btn btn-danger" href="{{ route('angkatan10') }}">Angkatan X</a>
+                            <a class="btn btn-secondary" href="{{ route('create.member') }}">Tambah Data</a>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -71,10 +72,10 @@
                                         </td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="{{ route('edit_member', $item->id) }}" class="btn btn-danger">
+                                                <a href="{{ route('edit.member', $item->id) }}" class="btn btn-danger">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <form action="{{ route('delete_member', $item->id) }}" method="POST"
+                                                <form action="{{ route('delete.member', $item->id) }}" method="POST"
                                                     style="display: inline" onsubmit="return confirm('Yakin?')">
                                                     @csrf
                                                     @method('DELETE')

@@ -10,7 +10,7 @@ class MemberController extends Controller
 {
     public function index()
     {
-        $member = Member::orderBy('nama', 'asc')->paginate(10);
+        $member = Member::orderBy('nama', 'asc')->get();
         return view('component.adminPage.member.index', compact('member'));
     }
 
@@ -45,6 +45,12 @@ class MemberController extends Controller
         return view('component.adminPage.member.angkatan9', compact('member'));
     }
 
+    public function index_angkatan10()
+    {
+        $member = Member::where('angkatan', 'X')->orderBy('nama', 'asc')->get();
+        return view('component.adminPage.member.angkatan10', compact('member'));
+    }
+
     public function create()
     {
         return view('component.adminPage.member.create');
@@ -71,7 +77,7 @@ class MemberController extends Controller
         $npm = $request->input('npm');
 
         if (Member::where('npm', $npm)->exists()) {
-            return redirect()->route('member_admin')->with('error', 'Data sudah ada');
+            return redirect()->route('member.admin')->with('error', 'Data sudah ada');
         }
 
         Member::create([
@@ -82,7 +88,7 @@ class MemberController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('member_admin')->with('status', 'Berhasil ditambah');
+        return redirect()->route('member.admin')->with('status', 'Berhasil ditambah');
     }
 
     public function edit(Request $request, $id)
@@ -115,7 +121,7 @@ class MemberController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('member_admin')->with('status', 'Berhasil diupdate');
+        return redirect()->route('member.admin')->with('status', 'Berhasil diupdate');
     }
 
     public function delete($id)
@@ -128,6 +134,6 @@ class MemberController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('member_admin')->with('status', 'Berhasil dihapus');
+        return redirect()->route('member.admin')->with('status', 'Berhasil dihapus');
     }
 }

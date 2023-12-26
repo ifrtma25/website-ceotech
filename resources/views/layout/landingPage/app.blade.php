@@ -30,9 +30,10 @@
                 <div class="col-lg-4">
                     <h3 class="text-light">About</h3>
                     <p>
-                        Ceotech_ adalah unit kegiatan kemahsiswaan yang di naungi oleh kampus STMIK Handayani
-                        Makakassar
-                        dan dirikan pada tahun 2014. tepatnya tanggal 17 Desember 2014 di Digital Inovation Lounge
+                        Ceotech_ adalah unit kegiatan kemahasiswaan yang di naungi oleh kampus STMIK Handayani
+                        Makassar sejak 2021 STMIK Handayani Makassar berubah menjadi Univeristas Handayani Makassar <br>
+                        Ceotech_ di dirikan pada tahun 2014. tepatnya tanggal 17 Desember 2014 di Digital Inovation
+                        Lounge
                         (DILO)
                     </p>
                 </div>

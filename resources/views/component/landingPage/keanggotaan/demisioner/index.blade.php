@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href=""><i class="fa fa-home"></i>Keanggotaan</a>
+                        <a href="{{ route('dashboard') }}"><i class="fa fa-home"></i>Keanggotaan</a>
                         <span>Demisioner</span>
                     </div>
                 </div>
@@ -26,6 +26,31 @@
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                     <div class="section-title">
+                                        <h4>Periode 2020-2021</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @foreach ($periode20_21 as $item)
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="product__item">
+                                        <div class="product__item__pic set-bg"
+                                            data-setbg="{{ asset('storage/' . $item->gambar) }}">
+                                            <div class="view">{{ $item->angkatan }}</div>
+                                            <h3 class="comment">{{ $item->npm }}</h3>
+                                        </div>
+                                        <div class="product__item__text">
+                                            <h5><a href="">{{ $item->nama }}</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="product__page__title">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                    <div class="section-title">
                                         <h4>Periode 2021-2022</h4>
                                     </div>
                                 </div>
@@ -33,6 +58,31 @@
                         </div>
                         <div class="row">
                             @foreach ($periode21_22 as $item)
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="product__item">
+                                        <div class="product__item__pic set-bg"
+                                            data-setbg="{{ asset('storage/' . $item->gambar) }}">
+                                            <div class="view">{{ $item->angkatan }}</div>
+                                            <h3 class="comment">{{ $item->npm }}</h3>
+                                        </div>
+                                        <div class="product__item__text">
+                                            <h5><a href="">{{ $item->nama }}</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="product__page__title">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                    <div class="section-title">
+                                        <h4>Periode 2022-2023</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @foreach ($periode22_23 as $item)
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="product__item">
                                         <div class="product__item__pic set-bg"

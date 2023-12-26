@@ -65,7 +65,7 @@ class PengurusController extends Controller
             $file = $request->file('gambar')->store('pengurus', 'public');
             if ($pengurus->gambar && file_exists(storage_path('app/public/' . $pengurus->gambar))) {
                 Storage::delete('public/' . $pengurus->gambar);
-                $file = $request->file('iamge')->store('pengurus', 'public');
+                $file = $request->file('gambar')->store('pengurus', 'public');
             }
         }
 

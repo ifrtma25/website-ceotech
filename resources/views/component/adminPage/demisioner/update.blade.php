@@ -6,7 +6,7 @@
             <div class="col-lg-8 col-xlg-9 col-md-7">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form-horizontal form-material" action="{{ route('update_demisioner', $demisioner->id) }}"
+                        <form class="form-horizontal form-material" action="{{ route('update.demisioner', $demisioner->id) }}"
                             method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
@@ -35,10 +35,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="jurusan" class="col-md-12">Jurusan</label>
+                                <label for="jabatan" class="col-md-12">Jabatan</label>
                                 <div class="col-md-12">
-                                    <input type="text" name="jurusan" id="jurusan"
-                                        class="form-control form-control-line" value="{{ $demisioner->jurusan }}">
+                                    <input type="text" name="jabatan" id="jabatan"
+                                        class="form-control form-control-line" value="{{ $demisioner->jabatan }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -63,7 +63,7 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <button class="btn btn-danger">Update</button>
-                                    <a href="{{ route('demisioner_admin') }}" class="btn btn-danger">Batal</a>
+                                    <a href="{{ route('demisioner.admin') }}" class="btn btn-danger">Batal</a>
                                 </div>
                             </div>
                         </form>

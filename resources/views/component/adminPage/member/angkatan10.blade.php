@@ -1,5 +1,5 @@
 @extends('layout.adminPage.app')
-@section('title', 'Member Angkatan VII')
+@section('title', 'Member Angkatan X')
 @section('content')
     @if (session('status'))
         <script>
@@ -15,15 +15,15 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Member Angkatan VII</h4>
+                        <h4 class="card-title">Member Angkatan X</h4>
                         <div class="card-body">
                             <a class="btn btn-danger" href="{{ route('member.admin') }}">Semua Angkatan</a>
                             <a class="btn btn-danger" href="{{ route('angkatan6') }}">Angkatan VI</a>
-                            <a class="btn btn-danger {{ Request::is('member_angkatan7') ? 'active' : '' }}"
-                                href="{{ route('angkatan7') }}">Angkatan VII</a>
+                            <a class="btn btn-danger" href="{{ route('angkatan7') }}">Angkatan VII</a>
                             <a class="btn btn-danger" href="{{ route('angkatan8') }}">Angkatan VIII</a>
                             <a class="btn btn-danger" href="{{ route('angkatan9') }}">Angkatan IX</a>
-                            <a class="btn btn-danger" href="{{ route('angkatan10') }}">Angkatan X</a>
+                            <a class="btn btn-danger {{ Request::is('member_angkatan10') ? 'active' : '' }}"
+                                href="{{ route('angkatan10') }}">Angkatan X</a>
                             <a class="btn btn-secondary" href="{{ route('create.member') }}">Tambah Data</a>
                         </div>
                     </div>

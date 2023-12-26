@@ -24,7 +24,7 @@ class ChangePasswordController extends Controller
                 'password' => Hash::make($request->password),
             ]);
 
-            return redirect()->route('dashboard_admin')->with('status', 'Password berhasil diubah');
+            return redirect()->route('dashboard.admin')->with('status', 'Password berhasil diubah');
         } else {
             return back()->withErrors(['current_password' => 'Password lama tidak sesuai.'])->withInput();
         }

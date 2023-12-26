@@ -10,4 +10,9 @@ class DashboardController extends Controller
     {
         return view('component.landingPage.dashboard');
     }
+
+    public function profile()
+    {
+        return view('component.landingPage.about.profile');
+    }
 }
